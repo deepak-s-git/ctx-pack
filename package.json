@@ -1,0 +1,54 @@
+{
+  "name": "ctx-pack",
+  "version": "0.1.0",
+  "description": "Assemble token-efficient AI context from your codebase using named profiles.",
+  "type": "module",
+  "bin": {
+    "ctx-pack": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "context",
+    "llm",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "copilot",
+    "cursor",
+    "cli",
+    "developer-tools",
+    "dx"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "fast-glob": "^3.3.3",
+    "jiti": "^2.4.2",
+    "js-tiktoken": "^1.0.19",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
