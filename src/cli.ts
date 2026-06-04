@@ -7,6 +7,7 @@ import { loadConfig } from "./config.js";
 import { resolveFiles } from "./resolver.js";
 import { formatProfile } from "./formatter.js";
 import { printStats, printDryRun } from "./printer.js";
+import { runInit } from "./init.js";
 
 // ---------------------------------------------------------------------------
 // CLI setup
@@ -24,6 +25,13 @@ const program = new Command()
   .option("-s, --stats", "Show per-file token breakdown table")
   .action(async (profileName: string | undefined, opts: CLIOptions) => {
     await run(profileName, opts);
+  });
+
+program
+  .command("init")
+  .description("Scaffold a ctx.config.ts in the current directory")
+  .action(async () => {
+    await runInit();
   });
 
 interface CLIOptions {
