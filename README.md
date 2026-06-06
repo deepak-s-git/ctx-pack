@@ -7,7 +7,7 @@ Stop manually copying files into ChatGPT / Claude / Gemini. Define named context
 ## Install
 
 ```bash
-npm install -D ctx-pack
+npm install -D ctx-pack-cli
 ```
 
 Or run directly with npx — no install required:
@@ -21,7 +21,7 @@ npx ctx-pack
 **1. Create a `ctx.config.ts` in your project root:**
 
 ```ts
-import { defineConfig } from "ctx-pack";
+import { defineConfig } from "ctx-pack-cli";
 
 export default defineConfig({
   profiles: {
