@@ -28,7 +28,7 @@ function generateConfig(profiles: ProfileInput[]): string {
     })
     .join("\n");
 
-  return `import { defineConfig } from "ctx-pack";
+  return `import { defineConfig } from "ctx-pack-cli";
 
 export default defineConfig({
   profiles: {
