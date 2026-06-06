@@ -2,6 +2,8 @@
 
 > Assemble token-efficient AI context from your codebase using named profiles.
 
+📄 **[View the Complete User Manual & Technical Documentation PDF](docs/user-manual.pdf)**
+
 Stop manually copying files into ChatGPT / Claude / Gemini. Define named context profiles in a `ctx.config.ts`, then run one command to get a clean, token-counted output ready to paste or pipe.
 
 ## Install
